@@ -1,0 +1,12 @@
+<form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <h3>Form</h3>
+    <label class="label">
+        <span>Name</span>
+        <input class="input" name="name" formControlName="name" />
+    </label>
+    <label class="label">
+        <span>Description</span>
+        <textarea class="textarea" name="description" formControlName="description" ></textarea>
+    </label>
+    <button class="form-btn" type="submit">Submit</button>
+</form>

@@ -1,0 +1,28 @@
+.header {
+    padding: 16px;
+    margin-bottom: 16px;
+    color: white;
+    background-color: #1e1e1e
+}
+
+.footer {
+    padding: 16px;
+    margin-top: 8px;
+    color: white;
+    background-color: #1e1e1e
+}
+
+.header__title,
+.footer__title {
+    font-size: 21px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.app-projects {
+    flex: 1;
+}

@@ -1,0 +1,18 @@
+<section class="container">
+    <div class="project-list__container">
+        <input class="search-input" placeholder="Search..." name="search" [(ngModel)]="search" />
+        <ul class="project-list">
+            <li class="project-item" *ngFor="let project of getFilteredProjects()">
+                <div class="project-item__overview">
+                    <h4 class="project-title">{{ project.name }}</h4>
+                    <p class="project-desc">{{ project.description }}</p>
+                </div>
+                <div class="project-item__actions">
+                    <app-button-icon text="update" [icon]="faPen" (onClick)="onUpdate()" />
+                    <app-button-icon text="delete" [icon]="faTimes" (onClick)="onDelete(project.id!)" />
+                </div>
+            </li>
+        </ul>    
+    </div>
+    <app-project-form class="projects-form" (createProject)="onCreate($event)" />
+<section>
